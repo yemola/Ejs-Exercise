@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <sidebar class="sidebar-box">
+          <div class="form-container">
+            <form>
+              <label for="quantity">Quantity</label>
+              <input
+                type="number"
+                autofocus
+                id="quantity"
+                placeholder="Type here"
+              />
+            </form>
+            <p class="obj col-1">OBJ1</p>
+          </div>
+        </sidebar>
+        <div class="item-box">
+          <div class="item-case"></div>
+          <p class="obj col-2">OBJ3</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let inputEl = document.getElementById("quantity");
+      // let entry = document.querySelector(".item");
+
+      let quantity = inputEl.value;
+      inputEl.addEventListener("input", renderItem);
+      function renderItem(e) {
+        let item = "";
+        quantity = e.target.value;
+        for (let i = 0; i < quantity; i++) {
+          item += `<div class="item">
+            <div class="circle"><p>${i + 1}</p></div>  
+            </div>`;
+        }
+        document.querySelector(".item-case").innerHTML = item;
+      }
+    </script>
+  </body>
+</html>
