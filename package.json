@@ -1,6 +1,9 @@
 {
   "name": "nodejstutorial",
   "version": "1.0.0",
+  "engine": {
+    "node": "16.13.0"
+  },
   "description": "Node JS Tutorial",
   "main": "index.js",
   "scripts": {
@@ -18,5 +21,17 @@
   "devDependencies": {
     "nodemon": "^2.0.15",
     "parcel-bundler": "^1.12.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yemola/Ejs-Exercise.git"
+  },
+  "keywords": [
+      "Tutorial",
+      "heroku"
+  ],
+  "bugs": {
+    "url": "https://github.com/yemola/Ejs-Exercise/issues"
+  },
+  "homepage": "https://github.com/yemola/Ejs-Exercise#readme"
 }

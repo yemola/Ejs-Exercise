@@ -32,7 +32,8 @@ body {
   gap: 2px;
   border: 2px solid var(--color-border);
   border-collapse: collapse;
-  height: 90vh;
+  min-height: 90vh;
+  height: auto;
 }
 
 .sidebar-box {

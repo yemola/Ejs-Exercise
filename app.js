@@ -2,7 +2,10 @@
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
 const app = express()
-const port = 5000
+let port = process.env.PORT
+if (port == null || port == '') {
+    port = 5000
+}
 
 // Static Files
 app.use(express.static('public'))
@@ -26,4 +29,4 @@ app.get('', (req, res) => {
 // })
 
 // Listen on port 5000
-app.listen(port, () => console.info(`listening on port ${port}`))
+app.listen(port, () => console.info(`Listening on port ${port}`))
